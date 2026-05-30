@@ -4,26 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
+    <title>Modern Age Calculator</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="calculator">
-            <h1>JavaScript<br><span>Age Calculator</span></h1>
-            <div class="input-box">
-                <input type="date" id="date">
-                <button onclick="calculateAge()">Calculate</button>
+    <div class="main-wrapper">
+
+        <!-- HEADER -->
+        <div class="top-header">
+
+            <div class="title-area">
+
+                <div class="icon-box">
+                    <i class="ri-calendar-2-line"></i>
+                </div>
+
+                <div>
+                    <h1>Age Calculator</h1>
+                    <p>Calculate your exact age from your date of birth.</p>
+                </div>
+
             </div>
-            <p id="result"></p>
+
         </div>
+
+        <!-- INPUT SECTION -->
+        <div class="card input-card">
+
+            <div class="card-left">
+
+                <div class="small-title">
+
+                    <div class="small-icon">
+                        <i class="ri-calendar-line"></i>
+                    </div>
+
+                    <div>
+                        <h2>Your Date of Birth</h2>
+                        <p>Select your date of birth to calculate your age.</p>
+                    </div>
+
+                </div>
+
+                <div class="input-row">
+
+                    <div class="date-field">
+
+                        <i class="ri-calendar-line"></i>
+
+                        <input type="date" id="date">
+
+                    </div>
+
+                    <button class="calculate-btn" onclick="calculateAge()">
+                        Calculate Age
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                </div>
+
+                <div class="privacy">
+                    <i class="ri-information-line"></i>
+                    <span>Your information is private and stays on your device.</span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE DESIGN -->
+            <div class="illustration">
+
+                <div class="calendar-shape">
+
+                    <div class="rings">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="check-box">
+                        <i class="ri-check-line"></i>
+                    </div>
+
+                    <div class="clock">
+                        <i class="ri-time-line"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RESULT SECTION -->
+        <div class="card result-card">
+
+            <div class="result-title">
+
+                <div class="small-icon">
+                    <i class="ri-magic-line"></i>
+                </div>
+
+                <h2>Your Age is</h2>
+
+            </div>
+
+            <div class="result-grid">
+
+                <div class="age-box">
+                    <h3 id="years">00</h3>
+                    <p>Years</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="age-box">
+                    <h3 id="months">00</h3>
+                    <p>Months</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="age-box">
+                    <h3 id="days">00</h3>
+                    <p>Days</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <i class="ri-heart-fill"></i>
+            Designed & Developed by <span>Kanwal Imran</span>
+        </div>
+
     </div>
 
-
-
     <script src="script.js"></script>
+
 </body>
 
 </html>
