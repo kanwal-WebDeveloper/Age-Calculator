@@ -1,140 +1,476 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    background: #151515;
-    color: #fff;
-}
-
-.container {
-    width: 100%;
+    font-family: "Inter", sans-serif;
+    background: #eef3f1;
     min-height: 100vh;
-    padding: 10px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    padding: 12px;
+    color: #101828;
+    overflow-x: hidden;
 }
 
-.calculator {
+.main-wrapper {
     width: 100%;
-    max-width: 600px;
-    margin-left: 10%;
-    margin-top: 5%;
+    max-width: 1180px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-.calculator h1 {
-    font-size: 60px;
+/* HEADER */
+
+.top-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e8ecec;
 }
 
-.calculator h1 span {
-    color: #38b182;
-}
-
-.input-box {
+.title-area {
     display: flex;
     align-items: center;
-    margin: 40px 0;
-    padding: 35px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.3);
+    gap: 16px;
 }
 
-.input-box input {
+.icon-box {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: #edf7f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box i {
+    font-size: 28px;
+    color: #14814c;
+}
+
+.title-area h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    color: #0f172a;
+}
+
+.title-area p {
+    margin-top: 6px;
+    color: #667085;
+    font-size: 16px;
+}
+
+/* CARD */
+
+.card {
+    margin-top: 22px;
+    border: 1px solid #e4ebea;
+    border-radius: 22px;
+    padding: 24px;
+    background: linear-gradient(to bottom, #ffffff, #fbfdfc);
+}
+
+/* INPUT CARD */
+
+.input-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-left {
     flex: 1;
-    margin-right: 20px;
-    padding: 14px 20px;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 5px;
+}
+
+.small-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.small-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: #edf7f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-icon i {
+    color: #11824a;
+    font-size: 24px;
+}
+
+.small-title h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.small-title p {
+    margin-top: 4px;
+    color: #667085;
+    font-size: 15px;
+}
+
+/* INPUT */
+
+.input-row {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.date-field {
+    flex: 1;
+    height: 68px;
+    border: 2px solid #e3e7eb;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
     position: relative;
+    overflow: hidden;
+    background: #fff;
 }
 
-.input-box button {
-    background: #38b182;
-    color: #fff;
-    border: 0;
-    outline: 0;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 500;
-    cursor: pointer;
+.date-field i {
+    font-size: 22px;
+    color: #6b7280;
 }
 
-.input-box input::-webkit-calendar-picker-indicator {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    position: absolute;
-    background-position: calc(100% - 10px);
-    background-size: 30px;
-    cursor: pointer;
-}
-
-#result {
+.date-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
     font-size: 20px;
+    margin-left: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
 }
 
-#result span {
-    color: #38b182;
+.date-field input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 18px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
 }
 
-/* Responsive for tablets and mobile without changing layout */
+.calculate-btn {
+    height: 68px;
+    border: none;
+    padding: 0 28px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #0c7a43, #0f8d4d);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Inter", sans-serif;
+    white-space: nowrap;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+}
+
+.calculate-btn i {
+    font-size: 22px;
+}
+
+.privacy {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #667085;
+    font-size: 15px;
+}
+
+.privacy i {
+    color: #12834a;
+    font-size: 18px;
+}
+
+/* ILLUSTRATION */
+
+.illustration {
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-shape {
+    width: 180px;
+    height: 180px;
+    border-radius: 24px;
+    background: linear-gradient(to bottom, #bff0d2, #f5fbf7);
+    position: relative;
+    box-shadow: 0 15px 30px rgba(19, 131, 75, 0.10);
+}
+
+.rings {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.rings span {
+    width: 8px;
+    height: 34px;
+    background: #4db77c;
+    border-radius: 20px;
+}
+
+.calendar-grid {
+    position: absolute;
+    top: 52px;
+    left: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+.calendar-grid span {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+}
+
+.check-box {
+    position: absolute;
+    right: 34px;
+    top: 78px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #15914f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-box i {
+    font-size: 22px;
+}
+
+.clock {
+    position: absolute;
+    right: -14px;
+    bottom: -14px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #fff;
+    border: 6px solid #1f9d5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock i {
+    color: #15914f;
+    font-size: 30px;
+}
+
+/* RESULT SECTION */
+
+.result-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.result-title h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.result-grid {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.age-box {
+    flex: 1;
+    text-align: center;
+}
+
+.age-box h3 {
+    font-size: 75px;
+    line-height: 1;
+    color: #0f8d4d;
+    font-weight: 800;
+}
+
+.age-box p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #667085;
+    font-weight: 600;
+}
+
+.divider {
+    width: 1px;
+    height: 100px;
+    background: #e3e7eb;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 24px;
+    text-align: center;
+    color: #667085;
+    font-size: 17px;
+}
+
+.footer i {
+    color: #0f8d4d;
+    margin-right: 6px;
+}
+
+.footer span {
+    color: #0f8d4d;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .input-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .illustration {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
-    .calculator {
-        max-width: 90%;
-        margin-left: 5%;
-        margin-top: 5%;
+
+    body {
+        padding: 10px;
     }
 
-    .calculator h1 {
-        font-size: 45px;
+    .main-wrapper {
+        padding: 18px;
+        border-radius: 22px;
     }
 
-    .input-box {
-        padding: 25px;
+    .title-area h1 {
+        font-size: 28px;
     }
 
-    .input-box input {
+    .title-area p {
+        font-size: 13px;
+    }
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon-box i {
+        font-size: 22px;
+    }
+
+    .small-title h2 {
+        font-size: 20px;
+    }
+
+    .small-title p {
+        font-size: 13px;
+    }
+
+    .small-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .small-icon i {
+        font-size: 20px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .date-field,
+    .calculate-btn {
+        width: 100%;
+        height: 58px;
+    }
+
+    .date-field input {
         font-size: 16px;
-        padding: 12px 15px;
-        margin-right: 15px;
     }
 
-    .input-box button {
-        padding: 12px 25px;
+    .calculate-btn {
+        justify-content: center;
         font-size: 16px;
     }
 
-    #result {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .calculator h1 {
-        font-size: 32px;
+    .privacy {
+        font-size: 13px;
+        line-height: 1.5;
     }
 
-    .input-box input {
+    .result-grid {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .age-box h3 {
+        font-size: 52px;
+    }
+
+    .age-box p {
+        font-size: 16px;
+    }
+
+    .result-title h2 {
+        font-size: 24px;
+    }
+
+    .footer {
         font-size: 14px;
-        padding: 10px 12px;
-        margin-right: 10px;
-    }
-
-    .input-box button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    #result {
-        font-size: 16px;
     }
 }
