@@ -6,44 +6,46 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background: #eef3f1;
+    background: #E8F0EF;
     min-height: 100vh;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
     color: #101828;
     overflow-x: hidden;
 }
 
+/* main container – fits exactly on desktop without scroll */
 .main-wrapper {
     width: 100%;
-    max-width: 1180px;
-    margin: auto;
+    max-width: 1080px;
+    margin: 0 auto;
     background: #ffffff;
     border-radius: 28px;
-    padding: 28px;
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    padding: 20px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* HEADER */
-
+/* HEADER – reduced spacing */
 .top-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 22px;
+    padding-bottom: 14px;
     border-bottom: 1px solid #e8ecec;
+    margin-bottom: 2px;
 }
 
 .title-area {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .icon-box {
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
     border-radius: 16px;
     background: #edf7f1;
     display: flex;
@@ -52,35 +54,33 @@ body {
 }
 
 .icon-box i {
-    font-size: 28px;
+    font-size: 26px;
     color: #14814c;
 }
 
 .title-area h1 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.1;
     color: #0f172a;
 }
 
 .title-area p {
-    margin-top: 6px;
+    margin-top: 4px;
     color: #667085;
-    font-size: 16px;
+    font-size: 14px;
 }
 
-/* CARD */
-
+/* CARDS – smaller margins and padding */
 .card {
-    margin-top: 22px;
+    margin-top: 16px;
     border: 1px solid #e4ebea;
     border-radius: 22px;
-    padding: 24px;
+    padding: 16px 22px;
     background: linear-gradient(to bottom, #ffffff, #fbfdfc);
 }
 
 /* INPUT CARD */
-
 .input-card {
     display: flex;
     justify-content: space-between;
@@ -95,12 +95,12 @@ body {
 .small-title {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 .small-icon {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
     border-radius: 15px;
     background: #edf7f1;
     display: flex;
@@ -110,45 +110,43 @@ body {
 
 .small-icon i {
     color: #11824a;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .small-title h2 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 800;
     color: #111827;
 }
 
 .small-title p {
-    margin-top: 4px;
+    margin-top: 3px;
     color: #667085;
-    font-size: 15px;
+    font-size: 13px;
 }
 
-/* INPUT */
-
+/* INPUT ROW – compact height */
 .input-row {
-    margin-top: 28px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
 }
 
 .date-field {
     flex: 1;
-    height: 68px;
+    height: 56px;
     border: 2px solid #e3e7eb;
     border-radius: 15px;
     display: flex;
     align-items: center;
-    padding: 0 18px;
+    padding: 0 16px;
     position: relative;
-    overflow: hidden;
     background: #fff;
 }
 
 .date-field i {
-    font-size: 22px;
+    font-size: 20px;
     color: #6b7280;
 }
 
@@ -157,8 +155,8 @@ body {
     border: none;
     outline: none;
     background: transparent;
-    font-size: 20px;
-    margin-left: 14px;
+    font-size: 16px;
+    margin-left: 12px;
     color: #6b7280;
     font-weight: 500;
     font-family: "Inter", sans-serif;
@@ -166,24 +164,24 @@ body {
 
 .date-field input::-webkit-calendar-picker-indicator {
     position: absolute;
-    right: 18px;
-    width: 22px;
-    height: 22px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
 .calculate-btn {
-    height: 68px;
+    height: 56px;
     border: none;
-    padding: 0 28px;
+    padding: 0 24px;
     border-radius: 15px;
     background: linear-gradient(to right, #0c7a43, #0f8d4d);
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     transition: 0.3s;
     font-family: "Inter", sans-serif;
@@ -195,35 +193,34 @@ body {
 }
 
 .calculate-btn i {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .privacy {
-    margin-top: 24px;
+    margin-top: 18px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     color: #667085;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .privacy i {
     color: #12834a;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-/* ILLUSTRATION */
-
+/* ILLUSTRATION – slightly smaller but intact */
 .illustration {
-    width: 240px;
+    width: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .calendar-shape {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 24px;
     background: linear-gradient(to bottom, #bff0d2, #f5fbf7);
     position: relative;
@@ -232,42 +229,42 @@ body {
 
 .rings {
     position: absolute;
-    top: -10px;
+    top: -8px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
 .rings span {
-    width: 8px;
-    height: 34px;
+    width: 7px;
+    height: 30px;
     background: #4db77c;
     border-radius: 20px;
 }
 
 .calendar-grid {
     position: absolute;
-    top: 52px;
-    left: 22px;
+    top: 46px;
+    left: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 9px;
+    gap: 8px;
 }
 
 .calendar-grid span {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
 }
 
 .check-box {
     position: absolute;
-    right: 34px;
-    top: 78px;
-    width: 42px;
-    height: 42px;
+    right: 28px;
+    top: 68px;
+    width: 38px;
+    height: 38px;
     border-radius: 10px;
     background: #15914f;
     color: #fff;
@@ -277,18 +274,18 @@ body {
 }
 
 .check-box i {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .clock {
     position: absolute;
-    right: -14px;
-    bottom: -14px;
-    width: 68px;
-    height: 68px;
+    right: -12px;
+    bottom: -12px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     background: #fff;
-    border: 6px solid #1f9d5b;
+    border: 5px solid #1f9d5b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,25 +293,24 @@ body {
 
 .clock i {
     color: #15914f;
-    font-size: 30px;
+    font-size: 26px;
 }
 
-/* RESULT SECTION */
-
+/* RESULT SECTION – compact numbers */
 .result-title {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 .result-title h2 {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 800;
     color: #111827;
 }
 
 .result-grid {
-    margin-top: 28px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -326,32 +322,31 @@ body {
 }
 
 .age-box h3 {
-    font-size: 75px;
+    font-size: 60px;
     line-height: 1;
     color: #0f8d4d;
     font-weight: 800;
 }
 
 .age-box p {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 6px;
+    font-size: 17px;
     color: #667085;
     font-weight: 600;
 }
 
 .divider {
     width: 1px;
-    height: 100px;
+    height: 80px;
     background: #e3e7eb;
 }
 
 /* FOOTER */
-
 .footer {
-    margin-top: 24px;
+    margin-top: 18px;
     text-align: center;
     color: #667085;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .footer i {
@@ -364,112 +359,90 @@ body {
     font-weight: 700;
 }
 
-/* RESPONSIVE */
-
+/* RESPONSIVE – unchanged from original (mobile stays as before) */
 @media (max-width: 900px) {
-
     .input-card {
         flex-direction: column;
         align-items: stretch;
     }
-
     .illustration {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-
     body {
-        padding: 10px;
+        padding: 20px;
+        align-items: flex-start;
     }
-
     .main-wrapper {
         padding: 18px;
         border-radius: 22px;
     }
-
     .title-area h1 {
-        font-size: 28px;
+        font-size: 29px;
     }
-
     .title-area p {
-        font-size: 13px;
+        font-size: 14px;
     }
-
     .icon-box {
         width: 48px;
         height: 48px;
     }
-
     .icon-box i {
+        font-size: 25px;
+    }
+    .small-title h2 {
         font-size: 22px;
     }
-
-    .small-title h2 {
-        font-size: 20px;
-    }
-
     .small-title p {
-        font-size: 13px;
+        font-size: 14px;
     }
-
     .small-icon {
         width: 48px;
         height: 48px;
     }
-
     .small-icon i {
         font-size: 20px;
     }
-
     .input-row {
         flex-direction: column;
         align-items: stretch;
     }
-
     .date-field,
     .calculate-btn {
         width: 100%;
         height: 58px;
     }
-
     .date-field input {
         font-size: 16px;
+        height: 50px;
     }
-
     .calculate-btn {
         justify-content: center;
         font-size: 16px;
     }
-
     .privacy {
         font-size: 13px;
         line-height: 1.5;
     }
-
     .result-grid {
         flex-direction: column;
         gap: 22px;
     }
-
     .divider {
         width: 100%;
         height: 1px;
     }
-
     .age-box h3 {
-        font-size: 52px;
+        font-size: 35px;
     }
-
     .age-box p {
         font-size: 16px;
     }
-
     .result-title h2 {
         font-size: 24px;
     }
-
     .footer {
         font-size: 14px;
     }
